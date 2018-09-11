@@ -1,0 +1,28 @@
+<h1>Counter</h1>
+
+<p>This is a simple example of an Angular component.</p>
+
+<p>Current count: <strong>{{ currentCount }}</strong></p>
+
+<button (click)="incrementCounter()">Increment</button>
+
+<br />
+<br />
+<button (click)="setStorage()">Hi there guys</button>
+<br />
+<button (click)="getStorage()">Hi there gals</button>
+<br />
+<button (click)="getWeatherforecast()">Click here to call the API - forecasts</button>
+<div *ngFor="let forecast of forecasts"><label>The date in the array is {{forecast.dateFormatted}}</label></div>
+<br />
+<button (click)="getSettings()">Click here to call the API - settings</button>
+<div *ngFor="let setting of settings">
+  <label>The User in the array is {{setting.user}}</label>
+  <br />
+  <label>&emsp;&emsp;FilterColumns are: '{{setting.filterOn}}'</label>
+  <br />
+  <label>&emsp;&emsp;GroupingColumns are: '{{setting.groupingColumns}}'</label>
+  <br />
+  <label>&emsp;&emsp;OrderByColumns are: '{{setting.orderByColumns}}'</label>
+</div>
+

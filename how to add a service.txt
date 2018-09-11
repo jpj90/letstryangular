@@ -1,0 +1,14 @@
+<button (click)="setStorage()">Set Value localStorage</button>
+<br />
+<button (click)="getStorage()">Print Value localStorage to Console</button>
+ 
+
+Step 1: https://angular.io/tutorial/toh-pt4
+Step 2: opened Git Bash in [C:\Users\dudem\OneDrive\Documenten\Visual Studio 2017\Projects\Angular\LetsTryAngular\LetsTryAngular\ClientApp\src\app]
+Step 3: ran [ng generate service persistforecast] 
+Step 4: created methods in the class in persistforecast.service.ts
+Step 5: in [app.module.ts] [import { PersistforecastService } from './persistforecast.service';]
+Step 6: in [app.module.ts] added [PersistforecastService] as a provider in the NgModule metadata
+Step 7: in [counter.component.ts] added [import { PersistforecastService } from '../persistforecast.service';]
+Step 8: in [counter.component.ts] added [constructor(private persistforecastservice: PersistforecastService) { }] in the class
+Step 9: in [counter.component.ts] created methods that call the service as (for example): [public getStorage() { this.persistforecastservice.get();}]
